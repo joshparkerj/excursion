@@ -29,6 +29,11 @@
       const videoSource = document.querySelector('video > source');
       videoSource.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/videos/excursion.mp4');
 
+      // start video based on stack overflow suggestion at https://stackoverflow.com/a/18454389/13920055
+      const video = document.querySelector('video');
+      video.load();
+      video.play();
+
       const campImg = document.querySelector('img[src*=camp]');
       campImg.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/images/camp.jpg');
 
