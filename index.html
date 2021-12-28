@@ -24,5 +24,17 @@
   <h2>Coming Soon for iPhone and Android</h2>
   <a href="download.html">Download Excursion (Coming soon!)</a>
   <footer>&copy; Excursion</footer>
+  <script>
+    if (document.URL.match(/^https?:\/\/joshparkerj\.github\.io/)) {
+      const videoSource = document.querySelector('video > source');
+      videoSource.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/videos/excursion.mp4');
+
+      const campImg = document.querySelector('img[src*=camp]');
+      campImg.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/images/camp.jpg');
+
+      const phoneImg = document.querySelector('img[src*=phone');
+      phoneImg.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/images/phone.png');
+    }
+  </script>
 </body>
 </html>
