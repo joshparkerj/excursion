@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,14 +10,17 @@
 
   <title>Excursion</title>
 </head>
+
 <body>
   <h1>Discover hidden places in the world around you</h1>
   <a href="download.html">Download Excursion (Coming soon!)</a>
   <!-- <img src="resources/img/mobile.png"> -->
-  <video autoplay muted>
-    <source src="resources/media/excursion.mp4" type="video/mp4">
-    video playback not supported
-  </video>
+  <div id="video-player">
+    <video autoplay muted>
+      <source src="resources/media/excursion.mp4" type="video/mp4">
+      video playback not supported
+    </video>
+  </div>
   <h2>Your personal travel guide</h2>
   <p>Excursion remembers places you like, and recommends new points of interest around you.</p>
   <img src="resources/img/camp.jpg">
@@ -26,13 +30,8 @@
   <footer>&copy; Excursion</footer>
   <script>
     if (document.URL.match(/^https?:\/\/joshparkerj\.github\.io/)) {
-      const videoSource = document.querySelector('video > source');
-      videoSource.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/videos/excursion.mp4');
-
-      // start video based on stack overflow suggestion at https://stackoverflow.com/a/18454389/13920055
-      const video = document.querySelector('video');
-      video.load();
-      video.play();
+      const videoPlayer = document.querySelector('div#video-player');
+      videoPlayer.innerHTML = '<video autoplay muted><source src="" type="video/mp4">video playback not supported</video>';
 
       const campImg = document.querySelector('img[src*=camp]');
       campImg.setAttribute('src', 'https://content.codecademy.com/programs/freelance-one/excursion/images/camp.jpg');
@@ -42,4 +41,5 @@
     }
   </script>
 </body>
+
 </html>
